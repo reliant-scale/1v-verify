@@ -1,0 +1,35 @@
+{
+  "algorithm": "Ed25519 over canonical_receipt_bytes",
+  "vectors": [
+    {
+      "name": "valid r1",
+      "input": "{\"receipt\":{\"count\":10,\"decision_id\":\"PILOT-0001-014\",\"issued_at\":\"2026-06-11T09:49:50Z\",\"title\":\"Notarization\"},\"signature\":\"XZPBpsr9Ubt48DJkXHOZNg0jDq70JorbuVS4GKt0fU9T9YVxhYR+QFf3r7DoLf5BhEFX/p9XS17lln16qGv7DA==\"}",
+      "pubkey_hex": "d3de2f07743e4319caad56c1d6d2be61f7ff3ba7199140e8e37437ade7495341",
+      "expect": true
+    },
+    {
+      "name": "valid r2 (unicode+nested)",
+      "input": "{\"receipt\":{\"decision_id\":\"PILOT-0001-021\",\"issued_at\":\"2026-06-11T10:00:00Z\",\"meta\":{\"a\":2,\"nested\":{\"x\":8,\"y\":9},\"z\":1},\"title\":\"Acta — María Núñez\"},\"signature\":\"SIV9utIagHMW68cN3KegqwKluXK5ncpAssaITpy+EZegkWslhcRzgfBokZQoejds6yjGhIi2Re9mch7UnWsCAQ==\"}",
+      "pubkey_hex": "d3de2f07743e4319caad56c1d6d2be61f7ff3ba7199140e8e37437ade7495341",
+      "expect": true
+    },
+    {
+      "name": "tampered title -> reject",
+      "input": "{\"receipt\":{\"count\":10,\"decision_id\":\"PILOT-0001-014\",\"issued_at\":\"2026-06-11T09:49:50Z\",\"title\":\"Notarization (altered)\"},\"signature\":\"XZPBpsr9Ubt48DJkXHOZNg0jDq70JorbuVS4GKt0fU9T9YVxhYR+QFf3r7DoLf5BhEFX/p9XS17lln16qGv7DA==\"}",
+      "pubkey_hex": "d3de2f07743e4319caad56c1d6d2be61f7ff3ba7199140e8e37437ade7495341",
+      "expect": false
+    },
+    {
+      "name": "wrong pubkey -> reject",
+      "input": "{\"receipt\":{\"count\":10,\"decision_id\":\"PILOT-0001-014\",\"issued_at\":\"2026-06-11T09:49:50Z\",\"title\":\"Notarization\"},\"signature\":\"XZPBpsr9Ubt48DJkXHOZNg0jDq70JorbuVS4GKt0fU9T9YVxhYR+QFf3r7DoLf5BhEFX/p9XS17lln16qGv7DA==\"}",
+      "pubkey_hex": "0000000000000000000000000000000000000000000000000000000000000000",
+      "expect": false
+    },
+    {
+      "name": "old sha256-of-canonical -> reject",
+      "input": "{\"receipt\":{\"count\":10,\"decision_id\":\"PILOT-0001-014\",\"issued_at\":\"2026-06-11T09:49:50Z\",\"title\":\"Notarization\"},\"signature\":\"/vxDvIKYUDJuRWbkwQuM3FT5D5/n82ok4x9ACR2MMtC1lXZfOth+RJtTKkvuEk+As8US7Ien77FlNo8QGrluAw==\"}",
+      "pubkey_hex": "d3de2f07743e4319caad56c1d6d2be61f7ff3ba7199140e8e37437ade7495341",
+      "expect": false
+    }
+  ]
+}

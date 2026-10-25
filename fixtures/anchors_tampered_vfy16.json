@@ -1,0 +1,26 @@
+[
+  {
+    "kid": "1v_rog_prod_001",
+    "alg": "Ed25519",
+    "public_key_b64_raw": "KHlriZV+Pjo26VB9ry+sMUKfHImMoudrRypVc1LrguY=",
+    "sha256": "52dc3b911f47caa31c10152c8f7000a895af176de5e5366df6b0450c2033706d",
+    "status": "PROVENANCE_PENDING",
+    "revoked": false
+  },
+  {
+    "kid": "1v_test_001",
+    "alg": "Ed25519",
+    "public_key_b64_raw": "7FxO0xVI3afCefWgeWR4w6SWi7Lv+dkh+3wvAqpAW44=",
+    "sha256": "1d6ad4da9c603480ddfe3547d24b741923fae6718abd7d772cd3971c044409ca",
+    "status": "TEST_ONLY",
+    "revoked": false
+  },
+  {
+    "kid": "1v_kit_test_20260611",
+    "alg": "Ed25519",
+    "public_key_b64_raw": "094vB3Q+QxnKrVbB1tK+Yff/O6cZkUDo43Q3redJU0E=",
+    "sha256": "4ca0e028403a4f4b81c38e173877770d2fcf8f5445e4c8f4dcdfb4815d1dc5d5",
+    "status": "TEST_ONLY",
+    "revoked": false
+  }
+]

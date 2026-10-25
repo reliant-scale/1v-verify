@@ -1,0 +1,13 @@
+{
+  "idempotency_key": "idem_synthetic_001",
+  "receipt_id": "R-SYNTH01",
+  "decision": "DENY",
+  "reasons": [
+    "scope_denied"
+  ],
+  "evidence_ref": "ev://synthetic",
+  "billed": true,
+  "workspace_id": "ws_synthetic",
+  "principal": "agent/synthetic",
+  "decided_at": "2026-10-23T18:00:00Z"
+}

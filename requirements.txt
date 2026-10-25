@@ -1,0 +1,12 @@
+# 1v-verify runtime dependency. Hash-pinned: pip install --require-hashes -r requirements.txt
+# Platform scope of this candidate: Linux x86_64, glibc >= 2.34, CPython 3.11, 3.12 or 3.13 (each tested).
+# cryptography >= 48.0.1 is required: earlier wheels bundle an OpenSSL affected by GHSA-537c-gmf6-5ccf.
+cryptography==50.0.2 \
+    --hash=sha256:9dab55f57c74c3cad24c323bacbbd04be4705ba6eb0d92e920b1fc4837ed5079
+# cffi ships one wheel per CPython minor; all three claimed minors are pinned (cp311 / cp312 / cp313, manylinux x86_64).
+cffi==2.1.1 \
+    --hash=sha256:34e261f78cb6ceaaa36f42f2613f4380d94d9c759a9c73c769ee6e0247364632 \
+    --hash=sha256:c1453022f490d2459a11819d83ad1d586e9ff65a12ac3e705ffebd46d3685dcf \
+    --hash=sha256:a931079504ecc49efed7744c476a5c343a92fabf66dec2db95edb1b2fdc770e2
+pycparser==3.12 \
+    --hash=sha256:a076f3f489b39b43ed13563a1dafe42447445bec2e294154ec5c57fcdda4c85e

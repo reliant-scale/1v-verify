@@ -1,0 +1,10 @@
+{
+  "run_id": "RUN-SYNTH",
+  "mission": "SYNTHETIC",
+  "lane": "INTEL",
+  "receipt": {
+    "id": "x"
+  },
+  "provider": {},
+  "outcome": "SYNTH"
+}

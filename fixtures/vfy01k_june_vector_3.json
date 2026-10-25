@@ -1,0 +1,1 @@
+{"format":"1v-receipt/1.0","kid":"1v_kit_test_20260611","alg":"Ed25519","payload":{"count":10,"decision_id":"PILOT-0001-014","issued_at":"2026-06-11T09:49:50Z","title":"Notarization (altered)"},"payload_sha256":"78cc168712b1cc89208095eca1a12701401ce47c9c583c6da2fbc7490daf8eb3","signature":"XZPBpsr9Ubt48DJkXHOZNg0jDq70JorbuVS4GKt0fU9T9YVxhYR+QFf3r7DoLf5BhEFX/p9XS17lln16qGv7DA=="}
